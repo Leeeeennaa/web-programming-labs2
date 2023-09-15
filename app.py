@@ -26,6 +26,12 @@ def lab1():
         Werkzeug, а также шаблонизатор Jinja2. Относится к категории так
         называемых микрофреймворков — минималистичных каркасов веб-приложений, сознательно предоставляющих лишь самые базовые возможности.</div><br>
 
+        <h2>Рализованные роуты</h2>
+
+        <a href="http://127.0.0.1:5000/lab1/python" target="_blank">ПИТОН</a>
+        <a href="http://127.0.0.1:5000/lab1/student" target="_blank">ПРО СТУДЕНТА</a>
+        <a href="http://127.0.0.1:5000/lab1/Curtains" target="_blank">ШТОРКИ</a>
+
         <footer>
             &copy; Елена Тарасова, ФБИ-12, 3 курс, 2023 
         </footer>
@@ -68,6 +74,64 @@ def oak ():
             <main>
                 <h1>Дуб</h1>
                 <img src="'''+ url_for('static', filename='oak.jpg') +'''"> 
+            </main>   
+        </body>
+</html>
+'''
+
+@app.route("/lab1/student")
+def student():
+    return '''
+<!doctype html>
+<html>
+    <head>
+    <link rel="stylesheet" href="'''+ url_for('static', filename='lab1.css') +'''">
+    </head>
+        <body>
+            <main>
+                <h1>Тарасова Елена Дмитриевна</h1>
+                <img src="'''+ url_for('static', filename='NSTU.jpg') +'''"> 
+            </main>   
+        </body>
+</html>
+'''
+
+@app.route("/lab1/python")
+def python():
+    return '''
+<!doctype html>
+<html>
+    <head>
+    <link rel="stylesheet" href="'''+ url_for('static', filename='lab1.css') +'''">
+    </head>
+        <body>
+            <main>
+                <h1>Python</h1>
+                <div>Python — это язык программирования, который широко используется в интернет-приложениях, разработке программного обеспечения,
+                 науке о данных и машинном обучении (ML). Разработчики используют Python, потому что он эффективен, прост в изучении и работает 
+                 на разных платформах. Программы на языке Python можно скачать бесплатно, они совместимы со всеми типами систем и повышают скорость
+                 разработки.</div>
+                <img src="'''+ url_for('static', filename='python.jpg') +'''"> 
+            </main>   
+        </body>
+</html>
+'''
+
+@app.route("/lab1/Curtains")
+def Curtains():
+    return '''
+<!doctype html>
+<html>
+    <head>
+    <link rel="stylesheet" href="'''+ url_for('static', filename='lab1.css') +'''">
+    </head>
+        <body>
+            <main>
+                <h1>Шторы</h1>
+                <div>В русском языке самое раннее появление слова «штора» отмечено, первоначально в виде «стора», в 1707 году 
+                (в форме мн. ч. «сторы»)[1], так оно было заимствовано из французского (фр. store), куда пришло из латинского (лат. storea),
+                 означающего «рогожа», «циновка»</div>
+                <img src="'''+ url_for('static', filename='Curtains.jpg') +'''"> 
             </main>   
         </body>
 </html>
