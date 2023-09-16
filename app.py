@@ -138,4 +138,5 @@ def Curtains():
 '''
 @app.route('/lab2/example')
 def example():
-    return render_template('example.html')
+    name = 'Тейлор Свифт'
+    return render_template('example.html', name=name)
