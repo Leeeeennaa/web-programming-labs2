@@ -138,9 +138,17 @@ def Curtains():
 '''
 @app.route('/lab2/example')
 def example():
-    name = ''
+    name = 'Тарасова Елена'
     nomber = '2'
-    group = ''
-    course = ''
-    return render_template('example.html', name=name,nomber=nomber, group=group, course=course)
+    group = ' ФБИ-12'
+    course = ' 3 курс'
+    fruits = [
+        {'name': 'яблоки', 'price': 100},
+        {'name': 'груши', 'price': 120},
+        {'name': 'апельсины', 'price': 80},
+        {'name': 'мандарины', 'price': 95},
+        {'name': 'манго', 'price': 321}
+    ]
+    return render_template('example.html', name=name,nomber=nomber, 
+                            group=group, course=course, fruits=fruits)
 
