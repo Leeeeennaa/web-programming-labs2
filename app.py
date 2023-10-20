@@ -149,6 +149,18 @@ def example():
         {'name': 'мандарины', 'price': 95},
         {'name': 'манго', 'price': 321}
     ]
+    book = [
+        {'author': 'Джордж Оруэлл','name': '1984','genre': 'научная фантастика','pages': '328 стр.'},
+        {'author': 'Лев Толстой','name': 'Война и мир','genre': 'роман','pages': '1392 стр.'},
+        {'author': 'Джоан роулинг','name': 'Гарри Поттер и филосовский камень','genre': 'фэнтези','pages': '223 стр.'},
+        {'author': 'Федор Достоевский','name': 'Преступление и наказание','genre': 'роман','pages': '671 стр.'},
+        {'author': 'Эрих Мария Ремарк','name': 'Три товарища','genre': 'роман','pages': '448 стр.'},
+        {'author': 'Михаил Булгаков','name': 'Мастер и Маргарита','genre': 'роман','pages': '480 стр.'},
+        {'author': 'Олдос Хаксли','name': 'О дивный новый мир','genre': 'научная фантастика','pages': '288 стр.'},
+        {'author': 'Пауло Коэльо','name': 'Алхимик','genre': 'роман','pages': '208 стр.'},
+        {'author': 'Антуан де Сент-Экзюпери','name': 'Маленький принц','genre': 'сказка','pages': '96 стр.'},
+        {'author': 'Лев Толстой','name': 'Анна Каренина','genre': 'роман','pages': '864 стр.'},
+    ]
     return render_template('example.html', name=name,nomber=nomber, 
-                            group=group, course=course, fruits=fruits)
+                            group=group, course=course, fruits=fruits,book=book)
 
