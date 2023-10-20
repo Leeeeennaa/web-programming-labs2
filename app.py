@@ -164,3 +164,7 @@ def example():
     return render_template('example.html', name=name,nomber=nomber, 
                             group=group, course=course, fruits=fruits,book=book)
 
+@app.route('/lab2/')
+def lab2():
+    return render_template('lab2.html')
+
