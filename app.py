@@ -54,7 +54,8 @@ def menu():
 
         <h1>Меню</h1>
 
-        <a href="http://127.0.0.1:5000/lab1" target="_blank">Первая лабораторная</a>
+        <a href="/lab1" target="_blank">Первая лабораторная</a>
+        <a href="/lab2/" target="_blank">Вторая лабораторная</a>
 
         <footer>
             &copy; Елена Тарасова, ФБИ-12, 3 курс, 2023 
@@ -168,3 +169,6 @@ def example():
 def lab2():
     return render_template('lab2.html')
 
+@app.route('/lab2/flowers/')
+def lab21():
+    return render_template('flowers.html')
