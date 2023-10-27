@@ -170,5 +170,5 @@ def lab2():
     return render_template('lab2.html')
 
 @app.route('/lab2/flowers/')
-def lab21():
+def flowers():
     return render_template('flowers.html')
