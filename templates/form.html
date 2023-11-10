@@ -23,18 +23,19 @@
         <label>Ваше имя:</label>
         <div>
             <input type="text" placeholder="как вас зовут?" name="user">
+            {{errors.user}}
         <div>
         
         <label>Ваш возраст:</label>
         <div>
-            <input type="number" name="age">
+            <input type="number" name="age" value="{{age or ''}}">
         </div>    
 
         <label>Ваш пол:</label>
         <div>
             <select name="sex">
-                <option value="male">мужчина</option>
-                <option value="female">женщина</option>
+                <option value="male" {{ sex == 'male' and 'selected' }}>мужчина</option>
+                <option value="female" {{ sex == 'female' and 'selected' }}>женщина</option>
             </select>
         </div>
 
