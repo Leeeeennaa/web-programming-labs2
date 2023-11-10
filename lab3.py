@@ -15,5 +15,8 @@ def form1():
         errors['user'] = 'Заполните поле!'
 
     age = request.args.get('age')
+    if age == '':
+        errors['age'] = 'Заполните поле!'
+
     sex = request.args.get('sex')
     return render_template('form.html', user=user, age=age, sex=sex, errors=errors)
