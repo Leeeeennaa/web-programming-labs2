@@ -57,9 +57,10 @@ def menu():
 
         <h1>Меню</h1>
 
-        <a href="/lab1" target="_blank">Первая лабораторная</a>
-        <a href="/lab2/" target="_blank">Вторая лабораторная</a>
-        <a href="/lab3/" target="_blank">Третья лабораторная</a>
+        <a href="/lab1" target="_blank">Первая лабораторная</a><br>
+        <a href="/lab2/" target="_blank">Вторая лабораторная</a><br>
+        <a href="/lab3/" target="_blank">Третья лабораторная</a><br>
+        <a href="/lab4/" target="_blank">Четвертая лабораторная</a><br>
 
         <footer>
             &copy; Елена Тарасова, ФБИ-12, 3 курс, 2023 
