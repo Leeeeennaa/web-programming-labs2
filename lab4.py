@@ -92,4 +92,38 @@ def zerno():
 @lab4.route("/lab4/zernoOk")
 def zernoOk():
     return render_template('zernoOk.html')
+
+
+@lab4.route("/lab4/cookies", methods=['GET', 'POST'])
+def cookies():
+    if request.method =='GET':
+        return render_template('cookies.html')
     
+    color = request.form.get('color')
+    b_color = request.form.get('background-color') 
+    f_size = request.form.get('font-size')
+    msg = ''
+
+    if color == b_color:
+        msg = 'цвет текста не должен совпадать с цветом фона'
+        return render_template('cookies.html', msg = msg)
+    elif color != b_color:
+        color = color
+
+    if f_size == '':
+        msg = 'Задайте размер текста'
+        return render_template('cookies.html', msg = msg)
+    
+    if 5<= int(f_size) <= 30:
+        f_size = str(f_size) + 'px'
+    else:
+        msg = 'Размер текста должен быть от 5px до 30px'
+        return render_template('cookies.html', msg = msg)
+    
+    headers = {
+         'Set-Cookie': 'color=' + color + f_size + b_color + '; path=/',
+         'Set-Cookie': 'font-size=' + f_size + '; path=/',
+         'Set-Cookie': 'background-color=' + b_color + '; path=/',
+         'Location': '/lab4/cookies'
+    }
+    return '', 303, headers
