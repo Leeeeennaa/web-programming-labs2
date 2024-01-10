@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 5{% endblock %}
+
+{% block main %} 
+<div>
+    <a href="/lab5/">
+        База знаний
+    </a>
+    <div>
+        <a href="***"></a>
+        <a href="/lab5/new_article">Создать заметку></a>
+    </div>
+    <div>
+        <a href="/lab5/login">Логин</a>
+        <a href="/lab5/register">Регистрация</a>
+        <div>{{username}}</div>
+    </div>
+</div>
+<div>
+    <h1>{{ article_title}}</h1>
+    {% for paragraph in article_text %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
+</div>
+{% endblock %}
