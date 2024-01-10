@@ -3,21 +3,19 @@
 {% block lab %}Лабораторная работа 4{% endblock %}
 
 {% block main %}
-    <H1>Вход</H1>
-    <h2>Пожалуйста, авторизируйтесь</h2>
-    <div style="color: red;">{{error}}</div>
-    <form method="post">
-        <div>
-            <label for="username">Пользователь:</label>
-            <input type="text" id="username" name="username" value="{{username}}">
-        </div>
-        <div>
-            <label for="password">Пароль:</label>
-            <input type="text" id="password" name="password" value="{{password}}">
-        </div>
-        <div>
-            <button type="submit">Войти</button>
-            <button type="reset">Отмена</button>
-        </div>
-    </form>
+<form action="" method="POST">
+    <h1>Авторизация</h1>
+    <div>
+        <p>
+            <input type="text" name="username" value="{{ username or ''}}"  placeholder="Пользователь">
+        </p>
+    </div>
+    <div style="margin-top:  15px">
+        <p>
+            <input type="password" name="password" value="{{ password or ''}}"  placeholder="Пароль">
+        </p>
+    </div>
+    <button type="submit">Войти</button>
+</form>
+<div> {{ errors }} </div>
 {% endblock %}
